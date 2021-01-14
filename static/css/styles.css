@@ -1,0 +1,836 @@
+@font-face {
+    font-family: 'Butler';
+    src: url('../Butler_Webfont/Butler-Bold.woff2') format('woff2'),
+        url('../Butler_Webfont/Butler-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Butler';
+    src: url('../static/Butler_Webfont/Butler.woff2') format('woff2'),
+        url('../static/Butler_Webfont/Butler.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --primary: #f8f7f4;
+  --secondary: #042825;
+  --tertiary: #292929;
+  --quaternary: #f2f4f5;
+  --quinary: ;
+}
+
+a {
+
+  color: var(--tertiary);
+
+}
+
+body{
+  margin: 0;
+  background-color: var(--primary);
+}
+
+footer{
+  background-color: white;
+  padding: 80px 15px 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Butler', sans-serif;
+  font-size: 28px;
+  color: var(--tertiary);
+  line-height: 1.43;
+}
+
+h2 {
+  font-family: 'Butler', sans-serif ;
+  font-size: 28px;
+}
+
+h3 {
+  font-family: 'Butler', sans-serif ;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: 'Butler', sans-serif;
+  font-size: 20px;
+}
+
+hr {
+  height: 1px;
+  opacity: 0.3;
+  color: #4d4d4d;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color:var(--primary);
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgb(77,77,77,0.3);
+  padding: 30px 0 20px;
+}
+
+input[type=text], input[type=button]{
+  webkit-appearance: none;
+  webkit-border-focus:0;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+nav {
+  display: flex;
+  position: relative;
+  width: 100vw;
+}
+
+nav>ul{
+  display: none;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav>ul>li{
+  margin: 0
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--tertiary);
+  letter-spacing: normal;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+section{
+  position: relative;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid rgb(77,77,77,0.3);
+  padding: 32px 0 20px;
+  margin-bottom: 20px;
+}
+
+textarea [type=text], input[type=button] {
+  webkit-appearance: none;
+  webkit-border-radius: 0;
+}
+textarea:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.accent-hero{
+  height: 76px;
+  width: 76px;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  background-color: #f4eee7;
+  z-index: -1;
+}
+
+
+.accent-nav{
+  position: absolute;
+  top: 0;
+  background-color: #f4eee7;
+  z-index: -1;
+  display: none;
+}
+
+
+.accent{
+  width: 76px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  background-color: #082422;
+  height: 100%;
+}
+
+.accent-center{
+  position: absolute;
+  top: 0px;
+  background-color: #082422;
+  height: 100%;
+  display: none;
+}
+
+.benefits{
+  padding: 64px 15px 48px;
+}
+
+.benefits>h2{
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.ben-heading{
+   display: flex;
+   flex-direction: column;
+}
+
+.ben-heading>h3{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.ben-heading>p{
+  margin-block-start: 8px;
+  margin-block-end: 0;
+}
+
+.ben-item>img{
+  width: 80px;
+  height: 80px;
+  margin: auto 24px auto 0;
+}
+
+.ben-item{
+   background-color: white;
+   padding: 24px;
+   margin-bottom: 16px;
+   display: flex;
+}
+
+.c-info{
+  margin: 18px 0
+}
+
+.c-info>a{
+  font-family: 'inter', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.c-info>img{
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+}
+
+.footer-logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.hero {
+  background-color: var(--primary);
+  margin: 0;
+  z-index: -2;
+}
+
+.hero>h1{
+  margin: 48px 0;
+  z-index: 5;
+}
+
+.hero>p{
+  opacity: 1;
+  max-width: 650px;
+}
+
+.hero-img{
+  width: 100vw;
+  height: 160px;
+  background-image: url('Sheep-in-pasture.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 72px;
+  position: relative;
+}
+
+.hero-img-products{
+  width: 100vw;
+  height: 160px;
+  background-image: url('White-dorper-in-pasture.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 72px;
+  position: relative;
+}
+
+.letter-lg{
+  background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
+  font-family: 'Butler', serif;
+  font-size: 106.7px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: right;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.1;
+  position: absolute;
+  bottom: 25px;
+  left: 85%
+}
+
+.line{
+  background-color: var(--tertiary);
+  width: 24px;
+  height: 1px;
+  transition: 0.3s;
+  position: relative;
+  top: 8px;
+  margin-right: 16px;
+}
+
+.line1{
+  width: 32px;
+  height: 2px;
+  background-color: var(--tertiary);
+  margin: 30px 0 0 15px;
+}
+
+.line1clicked{
+  transform:rotate(45deg);
+  top: 10px;
+}
+
+.line2{
+  width: 32px;
+  height: 2px;
+  background-color: var(--tertiary);
+  margin: 8px 0 0 15px;
+}
+
+.line2clicked{
+  display: none;
+}
+
+.line3{
+  width: 32px;
+  height: 2px;
+  background-color: var(--tertiary);
+  margin: 8px 0 0 15px;
+}
+.line3clicked{
+  transform: rotate(135deg);
+  top: 10px;
+}
+
+.link{
+  text-decoration: none;
+  display: flex;
+  font-family: 'Butler', serif;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 40px;
+}
+
+.link:hover .line{
+  top: 20px;
+  left: 40px;
+}
+
+.l-image{
+    height: 180px;
+    background-image: url(dorper-sheep.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+  margin: 24px auto 0;
+  height: 48px;
+}
+
+.love{
+  height: 248px;
+  background-image:
+                 linear-gradient(rgba(41, 41, 41, 0.9), rgba(41, 41, 41, 0.9)),
+                 url(sheep-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 48px 15px 0;
+}
+
+.love>p{
+  margin-bottom: 41px;
+}
+
+.main-btn{
+  color: var(--tertiary);
+  background-color: white;
+  font-family: 'Butler', serif;
+  padding: 17px 30px;
+  text-decoration: none;
+  letter-spacing: 1.8px;
+  margin-top: 24px;
+}
+
+.main-img{
+  width: 100vw;
+}
+
+.menu > ul {
+  display: flex;
+
+}
+
+.menu-item {
+  text-decoration: none;
+  color: var(--tertiary);
+  font-family: 'Rubik', sans-serif;
+  padding: 15px 20px;
+}
+
+.mobile-menu{
+  background-color: var(--primary);
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  top: 100px;
+  display: none;
+}
+
+.mobile-menu>ul{
+  list-style-type: none;
+  margin-top: 25vh;
+}
+.mobile-menu>ul>li{
+  margin: 25px ;
+  font-size: 14px;
+}
+
+.product-info>h3, .product-info>p{
+  color: white;
+  max-width: 400px;
+}
+
+
+.product-ewe>h3, .product-ewe>p{
+  color: white;
+  max-width: 400px;
+}
+
+.product{
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.product-ewe{
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.product-image-e{
+  height: 180px;
+  background-image: url(Ewe-and-lamb.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-image-m{
+  height: 180px;
+  background-image: url(lamb-meat.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-image-r{
+  height: 180px;
+  background-image: url(Dorper-Ram.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+}
+
+.products>a{
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.s-padding{
+    padding: 0 15px;
+}
+
+.search {
+  margin: 31px 21px 0 0;
+  z-index: 5;
+}
+.search>img{
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+}
+
+.submit{
+  text-decoration: none;
+  display: flex;
+  font-family: 'Butler', serif;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: white;
+  border: none;
+  margin:20px 0 40px;
+  font-size: 14px;
+  letter-spacing: 2.1px;
+}
+
+.submit:hover .line{
+  top: 20px;
+  left: 40px;
+}
+
+.what-we-offer{
+  background-color: var(--secondary);
+  padding: 80px 15px 0 15px;
+}
+
+.what-we-offer>h2{
+  color: white;
+  z-index: 3;
+}
+
+.white{
+  color: white;
+}
+
+.white-bg{
+  background-color: white;
+}
+
+@media only screen and (min-width: 481px){
+  body{
+    max-width: 100vw;
+  }
+
+  footer {
+    padding: 0 45px;
+  }
+
+  p{
+    max-width: 550px;
+  }
+
+  .accent{
+    width: 200px;
+  }
+
+  .ben-item{
+    margin: 16px auto;
+    max-width: 65vw;
+  }
+
+  .ewe{
+    left: 27vw;
+  }
+
+  .footer-logo>p{
+    max-width: 400px;
+    margin: auto;
+  }
+
+ .product-image-r{
+        max-width: 500px;
+        height: 250px;
+  }
+
+  .hero-img{
+    height: 250px;
+    width: 100vw;
+  }
+
+  .letter-lg{
+    left: 55%;
+  }
+
+  .love>*{
+    margin-left: 15vw;
+  }
+
+  .product{
+    position: relative;
+    left: 5vw;
+  }
+
+  .product-ewe{
+    left: 27vw;
+  }
+
+  .product-image-r{
+    max-width: 65vw;
+    height: 250px;
+  }
+
+  .product-image-e{
+    max-width: 65vw;
+    height: 250px;
+  }
+
+  .product-image-m{
+    max-width: 65vw;
+    height: 250px;
+  }
+
+  .what-we-offer>h2{
+    margin-bottom: 44px;
+    position: relative;
+    left: 5vw;
+  }
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 1025px){
+
+ h1{
+   font-size: 56px;
+ }
+
+ h2{
+   font-size: 56px;
+ }
+
+ p{
+   font-size: 20px;
+ }
+
+  nav>ul{
+    display: flex;
+    margin: 39px 0 0 100px;
+    z-index: 5;
+  }
+
+  .search{
+    margin-right: 130`1111111111111111111111111111111111111111111111px
+  }
+
+  .accent{
+    width: 27vw;
+  }
+
+  .accent-center{
+    display: block;
+    width: 27vw;
+    left: 22vw;
+  }
+
+  .accent-hero{
+    right: 0;
+    height: 100%;
+    width: 27vw;
+    left: auto;
+  }
+
+  .accent-nav{
+    right: 0;
+    height: 120px;
+    width: 27vw;
+    left: auto;
+    z-index: 2;
+    display: block;
+  }
+
+  .ben-item{
+    margin: 0;
+  }
+
+  .ben-item.first{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .ben-item.second{
+   grid-column-start: 2;
+   grid-row: 1 / 3;
+   display: flex;
+   flex-direction: column;
+  }
+  .second>*{
+    margin: 0 auto auto auto;
+  }
+
+  .ben-item.second>img{
+    margin: auto auto 40px;
+  }
+
+  .ben-item.second>.ben-heading>h3{
+    text-align: center;
+  }
+
+  .ben-item.third{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+  }
+
+  .ben-parent{
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+    margin: auto;
+    width: 80vw;
+  }
+
+  .bottom{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .Contact-us{
+    max-width: 45vw;
+    margin: 0 65px;
+  }
+
+  .footer-login{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-row{
+    display: flex;
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  .l-image{
+    height: 296px;
+  }
+
+  .letter-lg{
+    left: 50%;
+    bottom: 135px;
+  }
+
+  .love{
+    height: 248px;
+  }
+
+  .product-image-r{
+    height: 280px;
+    width: 45vw;
+    margin-right: 7vw;
+  }
+  .product-image-e{
+    height: 280px;
+    width: 45vw;
+    margin-left: 7vw;
+    position: relative;
+    left: -2vw;
+  }
+  .product-image-m{
+    height: 280px;
+    width: 45vw;
+    margin-right: 7vw;
+  }
+
+  .product-ewe{
+    display: flex;
+    flex-direction: row-reverse;
+    left: 3vw;
+    justify-content: space-around;
+  }
+
+  .product-ewe>.letter-lg{
+    left: 300px;
+  }
+
+  .hero{
+    padding-top: 65px;
+  }
+
+  .hero-img{
+    height: 320px;
+  }
+  .hero-img-products{
+    height: 320px;
+  }
+
+  .logo{
+    height: 68px;
+  }
+
+  .product{
+    display: flex;
+
+  }
+
+  .product-info{
+    max-width: 36vw;
+  }
+
+  .s-padding{
+    padding: 0 6vw;
+  }
+}
+
+@media only screen and (min-width: 1440px){
+
+  .accent{
+    right: 0;
+  }
+
+  .hero-img{
+    height: 420px;
+  }
+
+  .product-ewe>.letter-lg{
+    left: 360px;
+    bottom: 165px;
+  }
+
+  .letter-lg{
+    left: 45%
+  }
+
+  .product-image-r{
+    height: 310px;
+    width: 40vw;
+    margin-right: 7vw;
+  }
+  .product-image-e{
+    height: 310px;
+    width: 40vw;
+    margin-left: 7vw;
+    position: relative;
+    left: -2vw;
+  }
+  .product-image-m{
+    height: 310px;
+    width: 40vw;
+    margin-right: 7vw;
+  }
+
+}
