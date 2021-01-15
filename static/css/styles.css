@@ -1,20 +1,60 @@
 @font-face {
     font-family: 'Butler';
-    src: url('../Butler_Webfont/Butler-Bold.woff2') format('woff2'),
-        url('../Butler_Webfont/Butler-Bold.woff') format('woff');
+    src: url('/fonts/Butler-UltraLight.woff2') format('woff2'),
+        url('/fonts/Butler-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('/fonts/Butler-Medium.woff2') format('woff2'),
+        url('/fonts/Butler-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('/fonts/Butler-Light.woff2') format('woff2'),
+        url('/fonts/Butler-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('/fonts/Butler-Black.woff2') format('woff2'),
+        url('/fonts/Butler-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('/fonts/Butler-Bold.woff2') format('woff2'),
+        url('/fonts/Butler-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: 'Butler';
+    src: url('/fonts/Butler-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Butler-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Butler';
-    src: url('../static/Butler_Webfont/Butler.woff2') format('woff2'),
-        url('../static/Butler_Webfont/Butler.woff') format('woff');
+    src: url('/fonts/Butler.woff2') format('woff2'),
+        url('/fonts/Butler.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+
 
 :root {
   --primary: #f8f7f4;
@@ -276,6 +316,10 @@ textarea:focus, textarea:focus, select:focus{
   position: relative;
 }
 
+.img-product{
+  width: 100%;
+}
+
 .letter-lg{
   background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
   font-family: 'Butler', serif;
@@ -421,6 +465,13 @@ textarea:focus, textarea:focus, select:focus{
 .mobile-menu>ul>li{
   margin: 25px ;
   font-size: 14px;
+}
+
+.price{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Butler', serif;
+  opacity: 1;
 }
 
 .product-info>h3, .product-info>p{
