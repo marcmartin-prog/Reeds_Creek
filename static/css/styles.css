@@ -67,7 +67,7 @@
 a {
 
   color: var(--tertiary);
-
+  z-index: 1000;
 }
 
 body{
@@ -111,6 +111,9 @@ hr {
   height: 1px;
   opacity: 0.3;
   color: #4d4d4d;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
 
 header {
@@ -158,7 +161,7 @@ nav>ul>li{
 
 p {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--tertiary);
   letter-spacing: normal;
   line-height: 24px;
@@ -174,6 +177,7 @@ textarea {
   border-bottom: 1px solid rgb(77,77,77,0.3);
   padding: 32px 0 20px;
   margin-bottom: 20px;
+  max-width: 480px;
 }
 
 textarea [type=text], input[type=button] {
@@ -232,19 +236,20 @@ textarea:focus, textarea:focus, select:focus{
 
 .ben-heading{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
 }
 
 .ben-heading>h3{
   margin-block-start: 0;
   margin-block-end: 0;
+  margin: auto 0;
 }
-.ben-heading>p{
+.ben-item>p{
   margin-block-start: 8px;
   margin-block-end: 0;
 }
 
-.ben-item>img{
+.ben-heading>img{
   width: 80px;
   height: 80px;
   margin: auto 24px auto 0;
@@ -254,7 +259,7 @@ textarea:focus, textarea:focus, select:focus{
    background-color: white;
    padding: 24px;
    margin-bottom: 16px;
-   display: flex;
+
 }
 
 .c-info{
@@ -283,7 +288,7 @@ textarea:focus, textarea:focus, select:focus{
 .hero {
   background-color: var(--primary);
   margin: 0;
-  z-index: -2;
+  z-index: 1;
 }
 
 .hero>h1{
@@ -317,7 +322,19 @@ textarea:focus, textarea:focus, select:focus{
 }
 
 .img-product{
-  width: 100%;
+  height: 256px;
+  background-size: cover;
+  background-position: center;
+  max-width: 500px;
+}
+.ram{
+  background-image: url('Dorper-Ram.JPG');
+}
+.ewes{
+  background-image: url('White-Dorper-Ewes.jpg');
+}
+.meat{
+  background-image: url('lamb-meat.jpg');
 }
 
 .letter-lg{
@@ -345,7 +362,7 @@ textarea:focus, textarea:focus, select:focus{
   height: 1px;
   transition: 0.3s;
   position: relative;
-  top: 8px;
+  top: 10px;
   margin-right: 16px;
 }
 
@@ -353,7 +370,7 @@ textarea:focus, textarea:focus, select:focus{
   width: 32px;
   height: 2px;
   background-color: var(--tertiary);
-  margin: 30px 0 0 15px;
+  margin: 30px 0 0 25px;
 }
 
 .line1clicked{
@@ -365,10 +382,10 @@ textarea:focus, textarea:focus, select:focus{
   width: 32px;
   height: 2px;
   background-color: var(--tertiary);
-  margin: 8px 0 0 15px;
+  margin: 8px 0 0 25px;
 }
 
-.line2clicked{
+.line3clicked{
   display: none;
 }
 
@@ -376,11 +393,12 @@ textarea:focus, textarea:focus, select:focus{
   width: 32px;
   height: 2px;
   background-color: var(--tertiary);
-  margin: 8px 0 0 15px;
+  margin: 8px 0 0 25px;
 }
-.line3clicked{
+.line2clicked{
   transform: rotate(135deg);
   top: 10px;
+  margin-top: 0px
 }
 
 .link{
@@ -406,6 +424,8 @@ textarea:focus, textarea:focus, select:focus{
 
 .logo {
   margin: 24px auto 0;
+}
+.logo>img{
   height: 48px;
 }
 
@@ -443,7 +463,6 @@ textarea:focus, textarea:focus, select:focus{
 }
 
 .menu-item {
-  text-decoration: none;
   color: var(--tertiary);
   font-family: 'Rubik', sans-serif;
   padding: 15px 20px;
@@ -452,7 +471,7 @@ textarea:focus, textarea:focus, select:focus{
 .mobile-menu{
   background-color: var(--primary);
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   position: absolute;
   top: 100px;
   display: none;
@@ -465,6 +484,13 @@ textarea:focus, textarea:focus, select:focus{
 .mobile-menu>ul>li{
   margin: 25px ;
   font-size: 14px;
+}
+
+.m-menu{
+  text-decoration: none;
+  margin: 48px auto;
+  width: 230px;
+  font-size: 24px;
 }
 
 .price{
@@ -511,9 +537,9 @@ textarea:focus, textarea:focus, select:focus{
 
 .product-image-r{
   height: 180px;
-  background-image: url(Dorper-Ram.JPG);
+  background-image: url(white-dorper-ram.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 0% 0%;
 }
 
 .products{
@@ -525,6 +551,10 @@ textarea:focus, textarea:focus, select:focus{
   font-family: 'inter', sans-serif;
   font-weight: 400;
   margin-bottom: 24px;
+}
+
+#rc{
+  display: none;
 }
 
 .s-padding{
@@ -618,6 +648,11 @@ textarea:focus, textarea:focus, select:focus{
     width: 100vw;
   }
 
+  .hero-img-products{
+    height: 250px;
+    width: 100vw;
+  }
+
   .letter-lg{
     left: 55%;
   }
@@ -632,7 +667,7 @@ textarea:focus, textarea:focus, select:focus{
   }
 
   .product-ewe{
-    left: 27vw;
+    left: 22vw;
   }
 
   .product-image-r{
@@ -659,6 +694,34 @@ textarea:focus, textarea:focus, select:focus{
 
 @media only screen and (min-width: 768px){
 
+h1{
+  font-size: 36px;
+}
+
+h2{
+  font-size: 32px;
+}
+
+
+.hero-img{
+  height: 280px;
+}
+
+.hero-img-products{
+  height: 280px;
+}
+
+#rc{
+  display: inline-block;
+  position: absolute;
+  font-size: 52px;
+  opacity: 0.05;
+  font-family: "Butler", serif;
+  font-weight: 600;
+  left: 45vw;
+  bottom: 160px;
+  width: 500px;
+}
 }
 
 @media only screen and (min-width: 1025px){
@@ -677,12 +740,18 @@ textarea:focus, textarea:focus, select:focus{
 
   nav>ul{
     display: flex;
-    margin: 39px 0 0 100px;
+    margin: 39px 0 0 40px;
     z-index: 5;
   }
 
+  #rc{
+    font-size: 62px;
+    bottom: 300px;
+    left: 55vw;
+  }
+
   .search{
-    margin-right: 130`1111111111111111111111111111111111111111111111px
+    margin-right: 80px;
   }
 
   .accent{
@@ -727,7 +796,10 @@ textarea:focus, textarea:focus, select:focus{
    flex-direction: column;
   }
   .second>*{
-    margin: 0 auto auto auto;
+    margin:  auto auto;
+  }
+  .second>p{
+    margin-bottom: 45px;
   }
 
   .ben-item.second>img{
@@ -748,7 +820,7 @@ textarea:focus, textarea:focus, select:focus{
     display: grid;
     grid-gap: 32px;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 150px;
+    grid-auto-rows: 175px;
     margin: auto;
     width: 80vw;
   }
@@ -807,6 +879,7 @@ textarea:focus, textarea:focus, select:focus{
     margin-right: 7vw;
   }
 
+
   .product-ewe{
     display: flex;
     flex-direction: row-reverse;
@@ -829,8 +902,16 @@ textarea:focus, textarea:focus, select:focus{
     height: 320px;
   }
 
-  .logo{
+  .logo>img{
     height: 68px;
+  }
+
+  .price-flex{
+    display: flex;
+  }
+
+  .price-flex>div{
+    margin: 0 120px 0 0;
   }
 
   .product{
@@ -842,9 +923,47 @@ textarea:focus, textarea:focus, select:focus{
     max-width: 36vw;
   }
 
+  .product-item>h2{
+    font-size: 40px;
+    margin: 0;
+  }
+
+.product-item{
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-template-columns: 1fr 2fr;
+  width: 80vw;
+  column-gap: 100px;
+  row-gap: 48px;
+  margin: 160px auto 0 ;
+}
+.img-product{
+  grid-row-start: 1;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 612px;
+  background-position: center;
+}
+.ram{
+  background-position: -100%;
+}
+
+.product-text{
+  display: flex;
+  flex-direction: column;
+}
+.product-text>p{
+  max-width: 700px;
+}
+
   .s-padding{
     padding: 0 6vw;
   }
+}
+
+#meats{
+  padding-bottom: 165px;
 }
 
 @media only screen and (min-width: 1440px){
