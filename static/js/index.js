@@ -19,6 +19,20 @@ hamburger.addEventListener("click", function(){
       line3.classList.add('line3clicked');
     }
 });
+
+/*horizontal scroll for gallery section*/
+var btnLeft = document.getElementById('prev-btn');
+var btnRight = document.getElementById('next-btn');
+
+btnLeft.addEventListener('click', function(){
+  document.getElementById('gallery-parent').scrollLeft -=300;
+});
+
+btnRight.addEventListener('click', function(){
+  document.getElementById('gallery-parent').scrollLeft +=300;
+});
+
+
 /*make the menu close after clicking menu item*/
 var menuItem = document.getElementsByClassName("menu-item");
 

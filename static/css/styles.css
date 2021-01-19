@@ -132,6 +132,8 @@ input {
   border: none;
   border-bottom: 1px solid rgb(77,77,77,0.3);
   padding: 30px 0 20px;
+  margin-right: 10px;
+  max-width: 160px;
 }
 
 input[type=text], input[type=button]{
@@ -188,6 +190,22 @@ textarea:focus, textarea:focus, select:focus{
   outline: none;
 }
 
+input, select, textarea {
+    font-family: 'Inter', sans-serif;
+}
+::-webkit-input-placeholder {
+    font-family: 'Inter', sans-serif;
+}
+:-moz-placeholder {
+    font-family: 'Inter', sans-serif;
+}
+::-moz-placeholder {
+    font-family: 'Inter', sans-serif;
+}
+:-ms-input-placeholder {
+    font-family: 'Inter', sans-serif;
+}
+
 .accent-hero{
   height: 76px;
   width: 76px;
@@ -223,6 +241,11 @@ textarea:focus, textarea:focus, select:focus{
   background-color: #082422;
   height: 100%;
   display: none;
+}
+
+.ac-text>p{
+  margin-block-start: 0;
+  margin-block-end: 5px;
 }
 
 .benefits{
@@ -284,6 +307,13 @@ textarea:focus, textarea:focus, select:focus{
   justify-content: center;
 }
 
+.footer-menu{
+  min-width: 150px;
+}
+
+.gallery{
+  margin: 65px 0 150px 0;
+}
 
 .hero {
   background-color: var(--primary);
@@ -304,7 +334,7 @@ textarea:focus, textarea:focus, select:focus{
 .hero-img{
   width: 100vw;
   height: 160px;
-  background-image: url('Sheep-in-pasture.jpg');
+  background-image: url('/images/Sheep-in-pasture.jpg');
   background-position: center;
   background-size: cover;
   margin-top: 72px;
@@ -314,11 +344,30 @@ textarea:focus, textarea:focus, select:focus{
 .hero-img-products{
   width: 100vw;
   height: 160px;
-  background-image: url('White-dorper-in-pasture.jpg');
+  background-image: url('/images/White-dorper-in-pasture.jpg');
   background-position: center;
   background-size: cover;
   margin-top: 72px;
   position: relative;
+}
+
+.hero-img-products1{
+  width: 100vw;
+  height: 160px;
+  background-image: url('/images/about-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 72px;
+  position: relative;
+}
+
+
+.img-about{
+  width: 100%;
+  height: 256px;
+  background-image: url("/images/dorper-sheep1.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .img-product{
@@ -328,13 +377,13 @@ textarea:focus, textarea:focus, select:focus{
   max-width: 500px;
 }
 .ram{
-  background-image: url('Dorper-Ram.JPG');
+  background-image: url('/images/Dorper-Ram.JPG');
 }
 .ewes{
-  background-image: url('White-Dorper-Ewes.jpg');
+  background-image: url('/images/White-Dorper-Ewes.jpg');
 }
 .meat{
-  background-image: url('lamb-meat.jpg');
+  background-image: url('/images/lamb-meat.jpg');
 }
 
 .letter-lg{
@@ -417,7 +466,7 @@ textarea:focus, textarea:focus, select:focus{
 
 .l-image{
     height: 180px;
-    background-image: url(dorper-sheep.jpg);
+    background-image: url(/images/dorper-sheep.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -433,7 +482,7 @@ textarea:focus, textarea:focus, select:focus{
   height: 248px;
   background-image:
                  linear-gradient(rgba(41, 41, 41, 0.9), rgba(41, 41, 41, 0.9)),
-                 url(sheep-bg.jpg);
+                 url(/images/sheep-bg.jpg);
   background-position: center;
   background-size: cover;
   padding: 48px 15px 0;
@@ -475,6 +524,7 @@ textarea:focus, textarea:focus, select:focus{
   position: absolute;
   top: 100px;
   display: none;
+  z-index: 10;
 }
 
 .mobile-menu>ul{
@@ -523,23 +573,28 @@ textarea:focus, textarea:focus, select:focus{
 
 .product-image-e{
   height: 180px;
-  background-image: url(Ewe-and-lamb.jpg);
+  background-image: url(/images/Ewe-and-lamb.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .product-image-m{
   height: 180px;
-  background-image: url(lamb-meat.jpg);
+  background-image: url(/images/lamb-meat.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .product-image-r{
   height: 180px;
-  background-image: url(white-dorper-ram.jpg);
+  background-image: url(/images/white-dorper-ram.jpg);
   background-size: cover;
   background-position: 0% 0%;
+}
+
+.product-item{
+  margin: 48px 0;
+  padding: 2px 0;
 }
 
 .products{
@@ -551,6 +606,17 @@ textarea:focus, textarea:focus, select:focus{
   font-family: 'inter', sans-serif;
   font-weight: 400;
   margin-bottom: 24px;
+}
+
+.profile{
+  display: flex;
+  margin: 48px 0 64px;
+}
+
+.profile>img{
+  height: 140px;
+  width: 140px;
+  margin-right: 32px;
 }
 
 #rc{
@@ -607,6 +673,27 @@ textarea:focus, textarea:focus, select:focus{
   background-color: white;
 }
 
+#prev-btn{
+  position: absolute;
+  left: 10px;
+  top: 45%;
+  z-index: 5000;
+  transition: 0.3s;
+}
+#next-btn{
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  z-index: 5000;
+  transition: 0.3s;
+}
+#prev-btn:hover{
+  opacity: 0.5;
+}
+#next-btn:hover{
+  opacity: 0.5;
+}
+
 @media only screen and (min-width: 481px){
   body{
     max-width: 100vw;
@@ -648,9 +735,14 @@ textarea:focus, textarea:focus, select:focus{
     width: 100vw;
   }
 
-  .hero-img-products{
+  .hero-img-products, .hero-img-products1{
     height: 250px;
     width: 100vw;
+  }
+
+  .img-about{
+    height: 356px;
+    max-width: 500px;
   }
 
   .letter-lg{
@@ -685,6 +777,8 @@ textarea:focus, textarea:focus, select:focus{
     height: 250px;
   }
 
+
+
   .what-we-offer>h2{
     margin-bottom: 44px;
     position: relative;
@@ -702,13 +796,93 @@ h2{
   font-size: 32px;
 }
 
+textarea{
+  max-width: 650px;
+}
+
+.acquainted-section{
+  margin: 45px;
+}
+
+.about-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-txt{
+  position: relative;
+  top: 20%;
+}
+.about-txt>h2, .ac-text>h3, .gallery>h2{
+  font-size: 40px;
+}
+
+.ac-parent{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 35px;
+}
+
+.ac-text{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 24;
+}
+.ac-text>p{
+  max-width: 800px;
+}
+.profile{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  flex-direction: column;
+}
+.profile>img{
+  height: 240px;
+  width: 240px;
+}
+
+.gallery>h2{
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 64px;
+}
+
+.gallery-parent{
+  max-width: 60%;
+  margin: auto;
+}
+
+.gallery-parent>a>img{
+  height: 400px !important;
+}
 
 .hero-img{
   height: 280px;
 }
 
-.hero-img-products{
+.hero-img-products, .hero-img-products1{
   height: 280px;
+}
+
+.img-about{
+  width: 350px;
+  height: 550px;
+  position: relative;
+  top: -45px;
+  z-index: 2;
+}
+
+.price-flex{
+  display: flex;
+}
+.price-flex>div{
+  margin: 0 120px 0 0;
+}
+
+.product-item{
+  margin: 48px 20px;
 }
 
 #rc{
@@ -740,7 +914,7 @@ h2{
 
   nav>ul{
     display: flex;
-    margin: 39px 0 0 40px;
+    margin: 39px 0 0 10px;
     z-index: 5;
   }
 
@@ -751,7 +925,7 @@ h2{
   }
 
   .search{
-    margin-right: 80px;
+    margin-right: 40px;
   }
 
   .accent{
@@ -898,20 +1072,17 @@ h2{
   .hero-img{
     height: 320px;
   }
-  .hero-img-products{
+  .hero-img-products, .hero-img-products1{
     height: 320px;
+  }
+
+  .img-about{
+    width: 450px;
+    height: 750px;
   }
 
   .logo>img{
     height: 68px;
-  }
-
-  .price-flex{
-    display: flex;
-  }
-
-  .price-flex>div{
-    margin: 0 120px 0 0;
   }
 
   .product{
@@ -931,22 +1102,23 @@ h2{
 .product-item{
   display: grid;
   grid-auto-rows: 40px;
-  grid-template-columns: 1fr 2fr;
-  width: 80vw;
-  column-gap: 100px;
-  row-gap: 48px;
+  grid-template-columns: 1.1fr 1.9fr;
+  width: 90vw;
+  column-gap: 50px;
+  row-gap: 28px;
   margin: 160px auto 0 ;
+  padding-bottom: 140px;
 }
 .img-product{
   grid-row-start: 1;
   grid-row-end: 8;
   grid-column-start: 1;
   grid-column-end: 2;
-  height: 612px;
+  height: 572px;
   background-position: center;
 }
 .ram{
-  background-position: -100%;
+  background-position: 85%;
 }
 
 .product-text{
@@ -955,15 +1127,17 @@ h2{
 }
 .product-text>p{
   max-width: 700px;
+  margin-block-start: 0;
 }
 
   .s-padding{
     padding: 0 6vw;
   }
-}
 
-#meats{
-  padding-bottom: 165px;
+  #meats{
+    padding-bottom: 265px;
+  }
+
 }
 
 @media only screen and (min-width: 1440px){
@@ -1001,6 +1175,15 @@ h2{
     height: 310px;
     width: 40vw;
     margin-right: 7vw;
+  }
+
+  .product-item{
+    grid-template-columns: 1fr 2fr;
+    width: 80vw;
+    column-gap: 100px;
+    row-gap: 38px;
+    margin: 160px auto 0 ;
+    padding-bottom: 140px;
   }
 
 }
