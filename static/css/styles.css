@@ -73,6 +73,7 @@ a {
 body{
   margin: 0;
   background-color: var(--primary);
+  overflow-x: hidden;
 }
 
 footer{
@@ -172,6 +173,7 @@ p {
 
 section{
   position: relative;
+  overflow-x: hidden;
 }
 
 textarea {
@@ -377,7 +379,7 @@ input, select, textarea {
   max-width: 500px;
 }
 .ram{
-  background-image: url('/images/Dorper-Ram.JPG');
+  background-image: url('/images/Dorper-Ram.jpg');
 }
 .ewes{
   background-image: url('/images/White-Dorper-Ewes.jpg');
@@ -700,7 +702,7 @@ input, select, textarea {
   }
 
   footer {
-    padding: 0 45px;
+    padding: 100px 45px 24px;
   }
 
   p{
@@ -722,7 +724,7 @@ input, select, textarea {
 
   .footer-logo>p{
     max-width: 400px;
-    margin: auto;
+    margin: 0 auto 40px;
   }
 
  .product-image-r{
@@ -914,7 +916,7 @@ textarea{
 
   nav>ul{
     display: flex;
-    margin: 39px 0 0 10px;
+    margin: 39px 1vw 0 2vw;
     z-index: 5;
   }
 
@@ -926,6 +928,10 @@ textarea{
 
   .search{
     margin-right: 40px;
+  }
+
+  .search>a{
+    display: none;
   }
 
   .accent{
@@ -1085,6 +1091,15 @@ textarea{
     height: 68px;
   }
 
+  .menu-item{
+    transition: 0.3s;
+  }
+
+  .menu-item:hover{
+    opacity: 0.5;
+    text-decoration: none;
+  }
+
   .product{
     display: flex;
 
@@ -1160,19 +1175,19 @@ textarea{
   }
 
   .product-image-r{
-    height: 310px;
+    height: 380px;
     width: 40vw;
     margin-right: 7vw;
   }
   .product-image-e{
-    height: 310px;
+    height: 380px;
     width: 40vw;
     margin-left: 7vw;
     position: relative;
     left: -2vw;
   }
   .product-image-m{
-    height: 310px;
+    height: 380px;
     width: 40vw;
     margin-right: 7vw;
   }
