@@ -173,7 +173,7 @@ p {
 
 section{
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 textarea {
@@ -213,7 +213,7 @@ input, select, textarea {
   width: 76px;
   position: absolute;
   left: 0;
-  top: -20px;
+  top: 30px;
   background-color: #f4eee7;
   z-index: -1;
 }
@@ -248,6 +248,10 @@ input, select, textarea {
 .ac-text>p{
   margin-block-start: 0;
   margin-block-end: 5px;
+}
+
+.acquainted-section{
+  margin-top: 45px;
 }
 
 .benefits{
@@ -314,7 +318,7 @@ input, select, textarea {
 }
 
 .gallery{
-  margin: 65px 0 150px 0;
+  margin: 25px 0 150px 0;
 }
 
 .hero {
@@ -457,6 +461,7 @@ input, select, textarea {
   display: flex;
   font-family: 'Butler', serif;
   font-weight: bold;
+  letter-spacing: 2.1px;
   transition: 0.3s;
   margin-top: 40px;
 }
@@ -819,6 +824,10 @@ textarea{
   font-size: 40px;
 }
 
+.accent{
+  right: 15px;
+}
+
 .ac-parent{
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -829,7 +838,7 @@ textarea{
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
-  grid-row-end: 24;
+  grid-row-end: 21;
 }
 .ac-text>p{
   max-width: 800px;
@@ -874,6 +883,11 @@ textarea{
   position: relative;
   top: -45px;
   z-index: 2;
+  margin-left: 20px;
+}
+
+.mission{
+  top: -45px;
 }
 
 .price-flex{
@@ -936,6 +950,7 @@ textarea{
 
   .accent{
     width: 27vw;
+    right: 15px;
   }
 
   .accent-center{
@@ -949,6 +964,7 @@ textarea{
     height: 100%;
     width: 27vw;
     left: auto;
+    top: -20px;
   }
 
   .accent-nav{
@@ -1039,6 +1055,11 @@ textarea{
 
   .love{
     height: 248px;
+  }
+
+  .mission{
+
+    margin-left: 3vw;
   }
 
   .product-image-r{
@@ -1158,11 +1179,18 @@ textarea{
 @media only screen and (min-width: 1440px){
 
   .accent{
-    right: 0;
+    right: 15px;
   }
 
   .hero-img{
     height: 420px;
+  }
+
+  .love{
+    height: 300px;
+  }
+  .l-image{
+    height: 348px;
   }
 
   .product-ewe>.letter-lg{
