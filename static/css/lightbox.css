@@ -206,9 +206,15 @@ body.lb-disable-scrolling {
 }
 
 .gallery-parent{
+  scroll-snap-type: x mandatory;
   display: flex;
   overflow-x: scroll;
   position: relative;
+
+}
+
+.gallery-parent>a{
+  scroll-snap-align: start;
 }
 .gallery-parent>a>img{
   height: 200px;
