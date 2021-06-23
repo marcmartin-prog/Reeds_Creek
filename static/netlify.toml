@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "http://reedscreekfarms.com/products"
+  to = "https://reedscreekfarms.com/products/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "http://reedscreekfarms.com/about"
+  to = "https://reedscreekfarms.com/about/"
+  status = 301
+  force = false
