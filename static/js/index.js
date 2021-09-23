@@ -20,22 +20,6 @@ hamburger.addEventListener("click", function(){
     }
 });
 
-/*horizontal scroll for gallery section*/
-var btnLeft = document.getElementById('prev-btn');
-var btnRight = document.getElementById('next-btn');
-let image = document.querySelector(.gal-image);
-let scrollByWidth = image.clientWidth;
-
-btnLeft.addEventListener('click', function(){
-  document.getElementById('gallery-parent').scrollLeft -scrollByWidth;
-});
-
-btnRight.addEventListener('click', function(){
-  document.getElementById('gallery-parent').scrollLeft +scrollByWidth;
-});
-
-
-/*make the menu close after clicking menu item*/
 var menuItem = document.getElementsByClassName("menu-item");
 
 for (var i = 0; i < menuItem.length; i++) {
@@ -51,3 +35,20 @@ for (var i = 0; i < menuItem.length; i++) {
 	});
 
 }
+
+/*horizontal scroll for gallery section*/
+var btnLeft = document.getElementById('prev-btn');
+var btnRight = document.getElementById('next-btn');
+let image = document.querySelector(".gal-image");
+let scrollByWidth = image.clientWidth;
+
+btnLeft.addEventListener('click', function(){
+  document.getElementById('gallery-parent').scrollLeft -scrollByWidth;
+});
+
+btnRight.addEventListener('click', function(){
+  document.getElementById('gallery-parent').scrollLeft +scrollByWidth;
+});
+
+
+/*make the menu close after clicking menu item*/
