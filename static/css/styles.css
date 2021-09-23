@@ -380,19 +380,15 @@ input, select, textarea {
 
 .img-product{
   height: 256px;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   max-width: 500px;
+  width: 100%;
+
 }
 .ram{
-  background-image: url('/images/Dorper-Ram.jpg');
+  object-position: 75% 50%;
 }
-.ewes{
-  background-image: url('/images/White-Dorper-Ewes.jpg');
-}
-.meat{
-  background-image: url('/images/lamb-meat.jpg');
-}
+
 
 .letter-lg{
   background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
@@ -730,6 +726,8 @@ input, select, textarea {
     max-width: 400px;
     margin: 0 auto 40px;
   }
+
+
 
  .product-image-r{
 
@@ -1154,6 +1152,7 @@ textarea{
   grid-column-end: 2;
   height: 572px;
   background-position: center;
+  max-width: 410px;
 }
 .ram{
   background-position: 85%;
