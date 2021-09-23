@@ -23,13 +23,15 @@ hamburger.addEventListener("click", function(){
 /*horizontal scroll for gallery section*/
 var btnLeft = document.getElementById('prev-btn');
 var btnRight = document.getElementById('next-btn');
+let image = document.querySelector(.gal-image);
+let scrollByWidth = image.clientWidth;
 
 btnLeft.addEventListener('click', function(){
-  document.getElementById('gallery-parent').scrollLeft -=400;
+  document.getElementById('gallery-parent').scrollLeft -scrollByWidth;
 });
 
 btnRight.addEventListener('click', function(){
-  document.getElementById('gallery-parent').scrollLeft +=400;
+  document.getElementById('gallery-parent').scrollLeft +scrollByWidth;
 });
 
 

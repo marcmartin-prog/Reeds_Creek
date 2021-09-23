@@ -582,23 +582,20 @@ input, select, textarea {
 
 .product-image-e{
   height: 180px;
-  background-image: url(/images/Ewe-and-lamb.jpg);
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  width: 100%;
 }
 
 .product-image-m{
   height: 180px;
-  background-image: url(/images/lamb-meat.jpg);
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  width: 100%;
 }
 
 .product-image-r{
   height: 180px;
-  background-image: url(/images/white-dorper-ram.jpg);
-  background-size: cover;
-  background-position: 0% 0%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .product-item{
@@ -735,7 +732,7 @@ input, select, textarea {
   }
 
  .product-image-r{
-        max-width: 500px;
+
         height: 250px;
   }
 
@@ -772,13 +769,16 @@ input, select, textarea {
   }
 
   .product-image-r{
-    max-width: 65vw;
+    width: 65vw;
     height: 250px;
   }
 
   .product-image-e{
     max-width: 65vw;
     height: 250px;
+  }
+  .product-image-e img{
+    margin-left: 0;
   }
 
   .product-image-m{
