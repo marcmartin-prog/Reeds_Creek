@@ -41,14 +41,16 @@ var btnLeft = document.getElementById('prev-btn');
 var btnRight = document.getElementById('next-btn');
 let image = document.querySelector(".gal-image");
 let scrollByWidth = image.clientWidth;
+let gallery = document.getElementById('gallery-parent');
 
 btnLeft.addEventListener('click', function(){
-  document.getElementById('gallery-parent').scrollLeft -scrollByWidth;
+  gallery.scrollBy({left: -scrollByWidth, top: 0, behavior: 'smooth'});
 });
 
 btnRight.addEventListener('click', function(){
-  document.getElementById('gallery-parent').scrollLeft +scrollByWidth;
+  gallery.scrollBy({left: scrollByWidth, top: 0, behavior: 'smooth'});
 });
+
 
 
 /*make the menu close after clicking menu item*/

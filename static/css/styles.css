@@ -386,7 +386,7 @@ input, select, textarea {
 
 }
 .ram{
-  object-position: 75% 50%;
+  object-position: 75% 0;
 }
 
 
@@ -1155,7 +1155,7 @@ textarea{
   max-width: 410px;
 }
 .ram{
-  background-position: 85%;
+  object-position: 0 50%;
 }
 
 .product-text{
